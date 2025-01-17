@@ -130,11 +130,13 @@ const Fruits = () => {
                 <ul>
                     {fruits.map((fruit) => (
                         <li key={fruit.id}>
-                            <Image
-                                src={fruit.image}
-                                alt={fruit.name}
-                                style={{ width: 150, height: 150 }}
-                            />
+                           <Image
+    src={fruit.image}
+    alt={fruit.name}
+    width={150}
+    height={150}
+    unoptimized={true} // Optional if the image source isn't from a trusted domain
+/>
                             <p>Name: {fruit.name}</p>
                             <p>Price: ${fruit.price}</p>
                         </li>
