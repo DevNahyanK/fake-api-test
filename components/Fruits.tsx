@@ -91,6 +91,8 @@
 
 "use client";
 
+import Image from "next/image";
+
 import React, { useEffect, useState } from "react";
 
 interface Fruit {
@@ -128,7 +130,7 @@ const Fruits = () => {
                 <ul>
                     {fruits.map((fruit) => (
                         <li key={fruit.id}>
-                            <img
+                            <Image
                                 src={fruit.image}
                                 alt={fruit.name}
                                 style={{ width: 150, height: 150 }}
